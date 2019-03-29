@@ -9,4 +9,16 @@
 
 	<bean id="greeter" class="com.hyun.jdbc.spring.Greeter" />
 
+	<bean id="memberDao" class="com.hyun.jdbc.example.MemberDao" />
+
+	<bean id="articleService"
+		class="com.hyun.jdbc.example.ArticleService">
+		<property name="memberDao" ref="memberDao" />
+	</bean>
+
+	<bean id="memberService"
+		class="com.hyun.jdbc.example.MemberService">
+		<property name="memberDao" ref="memberDao" />
+	</bean>
+
 </beans>
