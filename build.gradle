@@ -1,14 +1,47 @@
-plugins {
+plugins {             
     id 'java'
-}
+}  
 
 repositories {
     jcenter()
 }
 
 dependencies {
+	// junit for test
+	implementation 'junit:junit:4.+'
+
+	// mariadb jdbc driver
 	implementation 'org.mariadb.jdbc:mariadb-java-client:2.+'
+	
+	// spring context and jdbc
 	implementation 'org.springframework:spring-context:5.+'
 	implementation 'org.springframework:spring-jdbc:5.+'
-	implementation 'junit:junit:+'
+	
+	// log4j 2	
+	implementation 'org.apache.logging.log4j:log4j-api:2.+'
+	implementation 'org.apache.logging.log4j:log4j-core:2.+'
+}
+task docs (dependsOn: javadoc, type: Copy) {
+	from 'build/docs/javadoc'
+	into 'docs'
+}
+
+task Main(type: JavaExec) {
+	main = 'com.hyun.jdbc.spring.Main'
+	classpath =  sourceSets.main.runtimeClasspath
+}
+
+task Main2(type: JavaExec) {
+	main = 'com.hyun.jdbc.spring.Main2'
+	classpath =  sourceSets.main.runtimeClasspath
+}
+
+task runMemberMain(type: JavaExec) {
+	main = 'com.hyun.jdbc.chap03.MemberMain'
+	classpath =  sourceSets.main.runtimeClasspath
+}
+
+task runMemberMainUsingSpring(type: JavaExec) {
+	main = 'com.hyun.jdbc.chap03.MemberMainUsingSpring'
+	classpath =  sourceSets.main.runtimeClasspath
 }
