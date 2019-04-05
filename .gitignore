@@ -5,3 +5,5 @@ gradle
 gradlew*
 settings.gradle
 /build/
+src/main/resources/db.properties
+
