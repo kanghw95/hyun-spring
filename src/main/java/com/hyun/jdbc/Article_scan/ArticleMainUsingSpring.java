@@ -1,4 +1,5 @@
 package com.hyun.jdbc.Article_scan;
+
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

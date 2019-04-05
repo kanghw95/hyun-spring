@@ -1,4 +1,5 @@
 package com.hyun.jdbc.Article_scan;
+
 /**
  * Article 도메인 오브젝트.<br>
  * 데이터베이스의 article 테이블에 매핑한다.

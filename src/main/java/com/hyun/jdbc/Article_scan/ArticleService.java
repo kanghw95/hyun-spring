@@ -44,10 +44,10 @@ public class ArticleService {
 	 */
 	public void addArticle() {
 		Article article = new Article();
-		article.setTitle("집에가고싶어유.");
+		article.setTitle("어벤져스");
 		article.setContent(
-				"보내주세요오오.");
-		article.setUserId("1");
+				"4월 24일.");
+		article.setUserId("65");
 		article.setName("강현우");
 		if (articleDao.addArticle(article) > 0)
 			System.out.println("글을 추가했습니다.");
