@@ -1,5 +1,6 @@
 package com.hyun.jdbc.chap08_scan;
 import java.util.List;
+import org.springframework.stereotype.Repository;
 
 import com.hyun.jdbc.chap03.Member;
 
@@ -9,6 +10,7 @@ import com.hyun.jdbc.chap03.Member;
  * 
  * @author Jacob
  */
+@Repository
 public interface MemberDao {
 
 	/**
